@@ -167,7 +167,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 .pun {
 	max-width: 1070px;
 	margin: 0 auto;
-	padding: 30px 40px;
+	padding: 100px 40px 30px;
 }
 
 #punredirect, #punmaint {
@@ -238,13 +238,32 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 ----------------------------------------------------------------*/
 
 #brdtitle h1 {
-	padding: 0 0 10px 0;
+    position: absolute;
+    top: -77px;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-size: 3.5em;
+
+}
+
+#brdtitle h1 a {
+    color: #9ac528;
+    text-decoration: none;
+    display: inline-block;
+    width: 208px;
+    height: 100px;
+    background: url(Galette/img/galette.png) top left no-repeat;
+    text-indent: 210px;
+    overflow: hidden;
 }
 
 #brddesc {
-	border-top-style: dotted;
-	border-top-width: 1px;
-	padding: 10px 0;
+    border-top: none;
+    padding: .5em 0;
+    color: #212121;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 #brddesc p {
@@ -252,16 +271,16 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 #brdmenu ul {
+    background: #e6e6e6;
 	padding: 0;
 }
 
 #brdmenu li {
-	float: left;
+    display: inline-block;
 }
 
 #brdmenu a:link, #brdmenu a:visited {
-	border-right-style: solid;
-	border-width: 1px;
+    border: none;
 	display: block;
 	min-width: 60px;
 	padding: 12px 16px 6px 8px;
@@ -1401,15 +1420,16 @@ COLOUR SCHEME
 /* Basic defaults and Common Items
 ----------------------------------------------------------------*/
 
-html, body, .pun {
-	background: #f6f9fc;
-	color: #333;
+body {
+    background: #636B70 url(Galette/img/bg.png) top left no-repeat;
+    color: #6b6b6b;
 }
 
 .pun .punwrap {
 	background: #fff;
 	border-color: #cad7e1;
 	color: #566579;
+    position: relative;
 }
 
 #brdtitle #brddesc, .pun .pagepost, #brdstats #onlinelist, #brdfooter #searchlinks, #brdfooter #modcontrols,
@@ -1437,18 +1457,16 @@ html, body, .pun {
 ----------------------------------------------------------------*/
 
 #brdmenu {
-	background: #44699c;
+    text-align: center;
 }
 
 #brdmenu a, #brdmenu a:link, #brdmenu a:visited {
-	background: #44699c;
-	border-color: #fff;
-	color: #d4dae2;
+    background: #e6e6e6;
+    color: #666;
 }
 
 #brdmenu a:hover, #brdmenu a:active, #brdmenu a:focus {
-	background: #b50000;
-	border-color: #fff;
+    background: #ffb619;
 	color: #fff;
 }
 
@@ -1566,7 +1584,7 @@ html, body, .pun {
 }
 
 #puninstall form#install .forminfo {
-	background: #44699c;
+    background: #e6e6e6;
 	color: #fff;
 }
 
