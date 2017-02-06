@@ -194,8 +194,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 ----------------------------------------------------------------*/
 
 #brdmain {
-	border-style: solid none;
-	border-width: 2px 0;
+	border-style: none;
 	margin-bottom: 12px;
 	padding: 12px 0;
 }
@@ -225,9 +224,30 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
 }
 
 #announce {
-	border-style: solid none none none;
-	border-width: 2px 0 0 0;
-	padding-top: 3px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px #ccc;
+    max-width: 40em;
+    margin: 1em auto 0;
+    background: url(Galette/img/bg-download.jpg) 50% 50% no-repeat;
+    text-align: center;
+}
+
+#announce-block .usercontent {
+    padding: 0;
+}
+
+#announce-block a {
+    border-radius: 10px;
+    color: #666;
+    display: block;
+    background: rgba(255, 255, 255, .8);
+    font-weight: bold;
+    padding: 1em;
+}
+#announce-block a:hover {
+    color: #212121;
+    box-shadow: 1px 1px 12px #ccc;
 }
 
 /*****************************************************************
@@ -283,7 +303,7 @@ html, body, .pun table, .pun div, .pun form, .pun p, .pun h1, .pun h2, .pun h3, 
     border: none;
 	display: block;
 	min-width: 60px;
-	padding: 12px 16px 6px 8px;
+	padding: 12px 10px 6px 10px;
 	white-space: nowrap;
 }
 
@@ -1442,7 +1462,7 @@ body {
 }
 
 .pun a:hover, .pun a:active, .pun a:focus {
-	color: #b50000;
+	color: #eea423;
 }
 
 .pun .postmsg .postimg a:link img, .pun .postmsg .postimg a:visited img {
@@ -1450,7 +1470,7 @@ body {
 }
 
 .pun .postmsg .postimg a:hover img, .pun .postmsg .postimg a:active img, .pun .postmsg .postimg a:focus img {
-	border-color: #b50000;
+	border-color: #eea423;
 }
 
 /* Primary Navigation
@@ -1467,7 +1487,7 @@ body {
 
 #brdmenu a:hover, #brdmenu a:active, #brdmenu a:focus {
     background: #ffb619;
-	color: #fff;
+    color: #212121;
 }
 
 /* Main Tables
@@ -1479,11 +1499,11 @@ body {
 }
 
 #punindex .blocktable h2, .pun #vf h2 {
-	color: #357082;
+	color: #666;
 }
 
 #adminconsole fieldset th, #adminconsole fieldset td {
-	background: #f6f9fc;
+	background: rgba(255, 255, 255, 0.5);
 	border-color: #dfe6ee;
 }
 
@@ -1496,9 +1516,9 @@ body {
 }
 
 .pun .blocktable th {
-	background: #ebf1f5;
+    background: #DDF;
 	border-color: #cad7e1;
-	color: #357082;
+	color: #666;
 }
 
 .pun .blocktable td.tcl span.stickytext {
@@ -1509,14 +1529,14 @@ body {
 ----------------------------------------------------------------*/
 
 .pun .blockpost {
-	background: #f6f9fc;
+	background: rgba(255, 255, 255, 0.5);
 	border-color: #b9c5ce #d9e1e7;
 }
 
 .pun .blockpost h2 {
-	background: #ebf1f5;
+	background: #ddf;
 	border-color: #cad7e1;
-	color: #357082;
+	color: #666;
 }
 
 .pun .blockpost .postbody, .pun .blockpost .postfoot {
@@ -1543,7 +1563,7 @@ body {
 }
 
 .pun .quotebox cite {
-	color: #357082;
+	color: #666;
 }
 
 .pun .codebox, #punhelp .codebox code {
@@ -1564,18 +1584,18 @@ body {
 
 .pun .blockform .box, #adstats, #adintro, #adalerts, #postpreview, #posterror {
 	border-color: #b9c5ce #d9e1e7;
-	background: #ebf1f5;
+	background: #ddf;
 }
 
 #punmisc #rules .box, #punhelp .box {
 	border-color: #b9c5ce #d9e1e7;
-	background: #f6f9fc;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 .pun #quickpost h2, #punpost .blockform h2, #punedit .blockform h2, #posterror h2,
 #pundelete .blockform h2 {
-	background: #ebf1f5;
-	color: #357082;
+	background: #ddf;
+	color: #666;
 }
 
 .pun .forminfo {
@@ -1600,12 +1620,12 @@ body {
 }
 
 .pun .infldset, #adintro .inbox, #adstats .inbox {
-	background: #f6f9fc;
+    background: rgba(255, 255, 255, 0.5);
 	border-color: #dfe6ee;
 }
 
 .pun label, .pun legend, #adminconsole fieldset th {
-	color: #357082;
+	color: #666;
 }
 
 .pun fieldset p {
@@ -1617,21 +1637,23 @@ body {
 }
 
 .pun .blockmenu a:hover, .pun .blockmenu a:active, .pun .blockmenu a:focus {
-	background: #ffffe6;
+    background: #ddf;
+    color: #212121;
 }
 
 .pun .blockmenu .isactive a:link, .pun .blockmenu .isactive a:visited {
-	color: #333;
-	background: #f6f9fc;
+	color: #212121;
+	background: #ddf;
+    opacity: .35;
 }
 
 .pun #viewprofile .box {
 	border-color: #b9c5ce #d9e1e7;
-	background: #ebf1f5;
+	background: #ddf;
 }
 
 .pun #viewprofile dt, #adstats dt {
-	color: #357082;
+	color: #666;
 }
 
 .pun #viewprofile dl, .pun #viewprofile dd, #adstats dl, #adstats dd {
@@ -1643,7 +1665,7 @@ body {
 }
 
 .pun .multiselect {
-	color: #357082;
+	color: #666;
 }
 
 .pun .checklist {
